@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.delete_all
+User.reset_pk_sequence
+User.create([{name:'Aksana', email:'miska_mmg@mail.ru'},
+             {name:'Natalya', email:'nata_ivanova@mail.ru'},
+             {name:'Anna', email:'lanfir23@mail.ru'}])
+
+Image.delete_all
+Image.reset_pk_sequence
+Image.create([{name:'panda', file:'panda.jpg', theme_id:1},
+              {name:'racoon', file:'racoon.jpg', theme_id:1},
+              {name:'owl', file:'owl.jpg', theme_id:1},
+              {name:'fox', file:'fox.jpg', theme_id:1},
+              {name:'sheep', file:'sheep.jpg', theme_id:1},
+              {name:'cat', file:'cat.jpg', theme_id:1},
+              {name:'fluorite', file:'fluorite.jpg', theme_id:2},
+              {name:'quartz', file:'quartz.jpg', theme_id:2},
+              {name:'granat', file:'granat.jpg', theme_id:2}])
+
+Theme.delete_all
+Theme.reset_pk_sequence
+Theme.create([{name:'animals'},
+             {name:'minerals'}])
