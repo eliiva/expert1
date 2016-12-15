@@ -1,4 +1,6 @@
 class WorkController < ApplicationController
+  include WorkImage
+
   def index
     @images_count = Image.all.count
     # @selected_theme = "Select theme to leave your answer"
