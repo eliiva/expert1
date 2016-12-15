@@ -21,13 +21,13 @@ class WorkController < ApplicationController
     @image_data = {}
     I18n.locale = session[:current_locale]
 
-    current_user_id = current_user.id
+   # current_user_id = current_user.id
     if params[:theme] == "-----" #.blank?
       theme = "Select theme to leave your answer"
       theme_id = 1
       values_qty = Value.all.count.round
       data = { index: 0, name: 'padna', values_qty: values_qty, file: 'panda.jpg', image_id: 9,
-      current_user_id: current_user_id, user_valued: false, common_ave_value: 0, value: 0}
+     common_ave_value: 0, value: 0}
     else
       theme = params[:theme]
       theme_id = Theme.find_theme_id(theme)
