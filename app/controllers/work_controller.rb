@@ -32,8 +32,11 @@ class WorkController < ApplicationController
      common_ave_value: 0, value: 0}
     else
       theme = params[:theme]
+      logger.info "**********************************************"
+      logger.info "theme=#{theme}"
       theme_id = Theme.find_theme_id(theme)
       data = show_image(theme_id, 0)
+      logger.info "theme=#{ @image_data[:name]}"
     end
   session[:selected_theme_id] = theme_id
   image_data(theme, data)

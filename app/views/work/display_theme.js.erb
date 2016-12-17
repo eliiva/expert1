@@ -42,3 +42,52 @@ var pathImage = "assets/pictures/" + oneImageFile;
 // $('.img-center').html('<img alt="Selected Image" src="'+ pathImage + '"/>');
 $(".img-center").attr({title: "Selected image" });
 $(".img-center img").attr({alt: "Selected Image", src: pathImage, title: "Selected image" });
+
+//API
+$('.img-right-side').click(function(event) {
+  event.stopImmediatePropagation(); // would stop the event from bubbling to parent elements,
+  $.ajax({
+    type: "get",
+    url: "api/next_image",
+    data: { index: imageCurrentIndex,
+      theme_id: selectedThemeId,
+      length: themeImageSize},
+    dataType: 'json'
+  }).done(function (data_return){
+    console.log("success1c: " + data_return.notice );
+    imageCurrentIndex = data_return.new_image_index;
+    oneImageName = data_return.name;
+    oneImageFile = data_return.file;
+    oneImageId = data_return.image_id;
+    $('.image_display h2.up').append().html(oneImageName);
+    var pathImage = "assets/pictures/" + oneImageFile;
+    $(".img-center img").attr({alt: "Selected Image", src: pathImage, title: "Selected Image"});
+  })
+      .fail(function (data_return) {
+        console.log("error: data_return = " + data_return);
+      });
+});
+
+$('.img-left-side').click(function(event) {
+  event.stopImmediatePropagation(); // would stop the event from bubbling to parent elements,
+  $.ajax({
+    type: "get",
+    url: "api/next_image",
+    data: { index: imageCurrentIndex,
+      theme_id: selectedThemeId,
+      length: themeImageSize},
+    dataType: 'json'
+  }).done(function (data_return){
+    console.log("success1c: " + data_return.notice );
+    imageCurrentIndex = data_return.new_image_index;
+    oneImageName = data_return.name;
+    oneImageFile = data_return.file;
+    oneImageId = data_return.image_id;
+    $('.image_display h2.up').append().html(oneImageName);
+    var pathImage = "assets/pictures/" + oneImageFile;
+    $(".img-center img").attr({alt: "Selected Image", src: pathImage, title: "Selected Image"});
+  })
+      .fail(function (data_return) {
+        console.log("error: data_return = " + data_return);
+      });
+});

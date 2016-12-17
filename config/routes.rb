@@ -21,4 +21,12 @@ Rails.application.routes.draw do
   get 'main/about'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  namespace :api, defaults: { format: :json } do
+
+    match 'next_image',       to: 'api#next_image',   via: 'get'
+    match 'prev_image',       to: 'api#prev_image',   via: 'get'
+    match 'save_value',       to: 'api#save_value',   via: :get
+
+  end
 end
