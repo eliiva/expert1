@@ -9,3 +9,11 @@
     =link_to 'Help', main_help_path
   %li
     =link_to 'About', main_about_path
+
+  %p.locale
+
+  -#.ru_link
+  = link_to image_tag("ru_flag.jpg", alt: "",  style: "width: 10%; height: 10%", title: "Русский" ), locale: :ru
+  = link_to image_tag("en_flag.jpg", alt: "",  style: "width: 12%; height: 12%", title: "English"), locale: :en
+  %b
+    = I18n.locale
