@@ -1,0 +1,53 @@
+ru:
+  shared:
+    header:
+      work: "Экспертиза"
+      home: "Главная"
+      help: "Помощь"
+      sign_in: "Войти"
+      sign_out: "Выйти"
+      person: "Я"
+      profile: "Моя страница"
+      settings: "Настройки"
+
+  sessions:
+    new:
+      sign_in: "Войти"
+      sign_up: "Зарегистрироваться"
+      email: "E-mail"
+      password: "Пароль"
+      new_user?: "Новый пользователь?"
+
+  users:
+    form:
+      name: "Имя"
+      email: "E-mail"
+      password: "Пароль"
+      password_confirmation: "Подтверждение пароля"
+      create_account: "Создать мой аккаунт"
+
+    show:
+      work: "Экспертиза"
+      email: "E-mail:"
+
+    new:
+      sign_up: "Регистрация"
+#        back: "Назад"
+
+  work:
+
+    index:
+      def_select_theme: "Выберите тему для оценки"
+
+    button_theme_select:
+      select_theme_bt: "выбрать тему"
+
+    choose_theme_from_arr:
+      select_theme: "список тем"
+
+    images:
+      common_value: "средняя оценка:"
+      total_values: "всего оценок:"
+      make_decision: "Выберите оценку"
+      save_decision: "сохранить"
+      expert_value: "выбранная оценка:"

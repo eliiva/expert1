@@ -12,7 +12,16 @@
 //= require_self
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require bootstrap
 //= require bootstrap-sprockets
 //= require_tree .
+
+function updateSlider(slideAmount) {
+    var displayValue = document.getElementById("chosen_value");
+    console.log("IN updateSlider:  - slideAmount = " + slideAmount );
+    displayValue.innerHTML = slideAmount;
+
+    var pic = document.getElementById("pic");
+}
+
+
+
