@@ -9,6 +9,7 @@ User.delete_all
 User.reset_pk_sequence
 User.create([{name:'Aksana', email:'miska_mmg@mail.ru', password: "qwerty", password_confirmation: "qwerty"},
              {name: "Elizaveta", email: "liza_veta1313@mail.ru", password: "qwerty", password_confirmation: "qwerty"},
+             {name: "liza", email: "liza@mail.ru", password: "qwerty", password_confirmation: "qwerty"},
              {name:'Natalya', email:'nata_ivanova@mail.ru', password: "qwerty", password_confirmation: "qwerty"},
              {name:'Anna', email:'lanfir23@mail.ru', password: "qwerty", password_confirmation: "qwerty"}])
 
